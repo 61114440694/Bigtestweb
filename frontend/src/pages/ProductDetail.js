@@ -42,8 +42,8 @@ function ProductDetail(props) {
               Brand: <i>{product.brand}</i>
             </li>
           </ul>
-        </div>
-        <div className="detail-action">
+          <ul>
+          <div className="detail-action">
           <ul>
             <li>Price: {product.price}</li>
             <li>Status: กำลังจัดส่ง</li>
@@ -57,12 +57,15 @@ function ProductDetail(props) {
               </select>
             </li>
             <li>
-              <button className="checkout primary" onClick={buy}>
-                เพิ่มลงตะกร้า
+              <button className="checkout primary" style={{backgroundColor:'orange'}} onClick={buy}>
+                <h2 style={{ color: 'white' }}>เพิ่มลงตะกร้า</h2>
               </button>
             </li>
           </ul>
         </div>
+          </ul>
+        </div>
+        
       </div>
     </div>
   );

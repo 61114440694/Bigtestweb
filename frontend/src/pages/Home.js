@@ -19,7 +19,6 @@ function Home() {
   return loading? <div> กำลัง load อยู่นะครับ </div> :
           error? <div className="error"> ERRRR {error} </div> : (
     <div>
-      <h1>Shopping page </h1>
       <ul className="products">
         {products.map( (p) => 
           <li>

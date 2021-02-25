@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 function Header() {
   return (
-      <header className="header">
+      <header className="header" style={{backgroundColor:"red"}}>
         <div className="brand">
         </div>
         <center>
