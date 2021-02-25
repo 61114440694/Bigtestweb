@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import "./ProductDetail.css";
 import { useSelector, useDispatch } from "react-redux";
-import { detailProduct } from "../actions/product.js";
+import { detailProduct , addCart} from "../actions/product.js";
 import { useNavigate } from "react-router-dom";
 
 function ProductDetail(props) {
@@ -9,8 +9,8 @@ function ProductDetail(props) {
   const { product, loading, error } = productDetail;
   const dispatch = useDispatch();
 
-  function buy() {
-    alert("เพิ่มลงในตะกร้าแล้ว");
+  function buy(product) {
+    alert("เพิ่มสินค้า " +product.name);
     
   }
 
@@ -57,7 +57,7 @@ function ProductDetail(props) {
               </select>
             </li>
             <li>
-              <button className="checkout primary" style={{backgroundColor:'orange'}} onClick={buy}>
+              <button className="checkout primary" style={{backgroundColor:'orange'}} onClick={()=> buy(product)}>
                 <h2 style={{ color: 'white' }}>เพิ่มลงตะกร้า</h2>
               </button>
             </li>

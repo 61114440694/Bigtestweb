@@ -14,6 +14,12 @@ app.get('/api/product/:id', (req, res) => {
   res.send(product);
 })
 
+app.get('/api/cart/:product', (req,res) => {
+  cart.add(req.params.product);
+  console.log(cart);
+  res.send(cart);
+})
+
 // เริ่มเปิด server ที่ port 5000
 app.listen(5000, () => {
   console.log('starting server แล้วเด้อ');

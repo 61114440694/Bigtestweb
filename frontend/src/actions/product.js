@@ -25,4 +25,5 @@ const detailProduct = (productId) => async (dispatch) => {
   }
 };
 
+
 export { listProducts, detailProduct }
